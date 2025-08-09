@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>House Type Voting</title>
+  <title>Favorite Coffee Brand</title>
   <style>
     body {
       display: flex;
@@ -49,32 +49,32 @@
 </head>
 <body>
 
-  <h2>🏠 Vote for Your Favorite House Type!</h2>
+  <h2>☕ Vote for Your Coffee Brand!</h2>
 
   <div class="boxes">
-    <div class="box" onclick="vote('single')" title="Single-Family Home">🏡</div>
-    <div class="box" onclick="vote('bungalow')" title="Bungalow">🏠</div>
-    <div class="box" onclick="vote('townhouse')" title="Townhouse">🏘️</div>
-    <div class="box" onclick="vote('apartment')" title="Apartment">🏙️</div>
-    <div class="box" onclick="vote('condo')" title="Condominium">🏢</div>
+    <div class="box" onclick="vote('starbucks1')" title="Starbucks1">☕</div>
+    <div class="box" onclick="vote('coffee beans')" title="Coffee Beans">☕</div>
+    <div class="box" onclick="vote('nescafe')" title="Nescafe">☕</div>
+    <div class="box" onclick="vote('service water')" title="Service Water">🥛</div>
+    <div class="box" onclick="vote('great taste')" title="Great Taste">☕</div>
   </div>
 
   <div class="stats">
     <div><b>Total Votes: <span id="total">0</span></b></div>
-    <div>Single-Family Home: <span id="single-pct">0%</span></div>
-    <div>Bungalow: <span id="bungalow-pct">0%</span></div>
-    <div>Townhouse: <span id="townhouse-pct">0%</span></div>
-    <div>Apartment: <span id="apartment-pct">0%</span></div>
-    <div>Condominium: <span id="condo-pct">0%</span></div>
+    <div>Starbucks1: <span id="coffee beans">0%</span></div>
+    <div>Starbucks2: <span id="starbucks2">0%</span></div>
+    <div>Starbucks3: <span id="nescafe">0%</span></div>
+    <div>Service Water: <span id="service water">0%</span></div>
+    <div>Great Taste: <span id="great taste">0%</span></div>
   </div>
 
   <script>
     const counts = {
-      single: 0,
-      bungalow: 0,
-      townhouse: 0,
-      apartment: 0,
-      condo: 0
+      starbucks1: 0,
+      coffee beans: 0,
+      nescafe: 0,
+      service water: 0,
+      great taste: 0
     };
 
     function vote(type) {
@@ -90,11 +90,11 @@
         return total === 0 ? '0%' : Math.round((count / total) * 100) + '%';
       }
 
-      document.getElementById('single-pct').textContent = percent(counts.single);
-      document.getElementById('bungalow-pct').textContent = percent(counts.bungalow);
-      document.getElementById('townhouse-pct').textContent = percent(counts.townhouse);
-      document.getElementById('apartment-pct').textContent = percent(counts.apartment);
-      document.getElementById('condo-pct').textContent = percent(counts.condo);
+      document.getElementById('starbucks1').textContent = percent(counts.starbucks1);
+      document.getElementById('coffee beans').textContent = percent(counts.coffee beans);
+      document.getElementById('nescafe').textContent = percent(counts.nescafe);
+      document.getElementById('service water').textContent = percent(counts.service_water);
+      document.getElementById('great taste').textContent = percent(counts.great_taste);
     }
   </script>
 
